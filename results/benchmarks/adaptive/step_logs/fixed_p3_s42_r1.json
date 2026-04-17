@@ -1,0 +1,410 @@
+[
+  {
+    "timestep_index": 0,
+    "delta_latent": null,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.19850059999953373
+  },
+  {
+    "timestep_index": 2,
+    "delta_latent": 0.0056242248974740505,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.006109699999797158
+  },
+  {
+    "timestep_index": 2,
+    "delta_latent": 0.00038883203524164855,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.007364599998254562
+  },
+  {
+    "timestep_index": 3,
+    "delta_latent": 0.005866963416337967,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.20784490000005462
+  },
+  {
+    "timestep_index": 4,
+    "delta_latent": 0.010392749682068825,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.007535999997344334
+  },
+  {
+    "timestep_index": 5,
+    "delta_latent": 0.006823455914855003,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.006806800000049407
+  },
+  {
+    "timestep_index": 6,
+    "delta_latent": 0.010476374067366123,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.17487689999688882
+  },
+  {
+    "timestep_index": 7,
+    "delta_latent": 0.02192338928580284,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.006217199999809964
+  },
+  {
+    "timestep_index": 8,
+    "delta_latent": 0.01142058428376913,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.007370600000285776
+  },
+  {
+    "timestep_index": 9,
+    "delta_latent": 0.01878705434501171,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.184407699998701
+  },
+  {
+    "timestep_index": 10,
+    "delta_latent": 0.023878498002886772,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.007001399997534463
+  },
+  {
+    "timestep_index": 11,
+    "delta_latent": 0.01942082680761814,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.007848000001104083
+  },
+  {
+    "timestep_index": 12,
+    "delta_latent": 0.018331237137317657,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.17868539999835775
+  },
+  {
+    "timestep_index": 13,
+    "delta_latent": 0.020337367430329323,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.007262499999342253
+  },
+  {
+    "timestep_index": 14,
+    "delta_latent": 0.01819854974746704,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.008625899998150999
+  },
+  {
+    "timestep_index": 15,
+    "delta_latent": 0.015160052105784416,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.17809759999727248
+  },
+  {
+    "timestep_index": 16,
+    "delta_latent": 0.01864423044025898,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.00835930000175722
+  },
+  {
+    "timestep_index": 17,
+    "delta_latent": 0.015076878480613232,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.008079600000201026
+  },
+  {
+    "timestep_index": 18,
+    "delta_latent": 0.016941465437412262,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.17940659999658237
+  },
+  {
+    "timestep_index": 19,
+    "delta_latent": 0.01809556595981121,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.010695999997551553
+  },
+  {
+    "timestep_index": 20,
+    "delta_latent": 0.0172505471855402,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.011685200002830243
+  },
+  {
+    "timestep_index": 21,
+    "delta_latent": 0.017573241144418716,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.18158970000149566
+  },
+  {
+    "timestep_index": 22,
+    "delta_latent": 0.018526386469602585,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.011225399997783825
+  },
+  {
+    "timestep_index": 23,
+    "delta_latent": 0.018147815018892288,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.010024899998825276
+  },
+  {
+    "timestep_index": 24,
+    "delta_latent": 0.018889207392930984,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.18083120000301278
+  },
+  {
+    "timestep_index": 25,
+    "delta_latent": 0.02004680037498474,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.010886199997912627
+  },
+  {
+    "timestep_index": 26,
+    "delta_latent": 0.01953354850411415,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.01031180000063614
+  },
+  {
+    "timestep_index": 27,
+    "delta_latent": 0.020264822989702225,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.1774915999994846
+  },
+  {
+    "timestep_index": 28,
+    "delta_latent": 0.021777857095003128,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.011028299999452429
+  },
+  {
+    "timestep_index": 29,
+    "delta_latent": 0.020784694701433182,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.012376000002404908
+  },
+  {
+    "timestep_index": 30,
+    "delta_latent": 0.02188699133694172,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.18350569999893196
+  },
+  {
+    "timestep_index": 31,
+    "delta_latent": 0.022753339260816574,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.011237700000492623
+  },
+  {
+    "timestep_index": 32,
+    "delta_latent": 0.02224370837211609,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.010043099999165861
+  },
+  {
+    "timestep_index": 33,
+    "delta_latent": 0.02286416105926037,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.18343540000205394
+  },
+  {
+    "timestep_index": 34,
+    "delta_latent": 0.023610148578882217,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.010797499999171123
+  },
+  {
+    "timestep_index": 35,
+    "delta_latent": 0.023226793855428696,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.011472700000012992
+  },
+  {
+    "timestep_index": 36,
+    "delta_latent": 0.023660950362682343,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.17844960000002175
+  },
+  {
+    "timestep_index": 37,
+    "delta_latent": 0.024310452863574028,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.01209509999898728
+  },
+  {
+    "timestep_index": 38,
+    "delta_latent": 0.02399997040629387,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.01183810000293306
+  },
+  {
+    "timestep_index": 39,
+    "delta_latent": 0.024354413151741028,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.18383709999761777
+  },
+  {
+    "timestep_index": 40,
+    "delta_latent": 0.024928012862801552,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.01167169999826001
+  },
+  {
+    "timestep_index": 41,
+    "delta_latent": 0.024641945958137512,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.011600400001043454
+  },
+  {
+    "timestep_index": 42,
+    "delta_latent": 0.025036625564098358,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.18030939999880502
+  },
+  {
+    "timestep_index": 43,
+    "delta_latent": 0.025501659139990807,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.010618000000249594
+  },
+  {
+    "timestep_index": 44,
+    "delta_latent": 0.025522835552692413,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.012795200000255136
+  },
+  {
+    "timestep_index": 45,
+    "delta_latent": 0.02613998018205166,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.1967571000022872
+  },
+  {
+    "timestep_index": 46,
+    "delta_latent": 0.02668776363134384,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.011941800003114622
+  },
+  {
+    "timestep_index": 47,
+    "delta_latent": 0.02779446355998516,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.01123840000218479
+  },
+  {
+    "timestep_index": 48,
+    "delta_latent": 0.02961575798690319,
+    "threshold": null,
+    "refresh": true,
+    "reuse": false,
+    "step_unet_time_s": 0.18465830000059213
+  },
+  {
+    "timestep_index": 49,
+    "delta_latent": 0.03194316476583481,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.012066999999660766
+  },
+  {
+    "timestep_index": 50,
+    "delta_latent": 0.04997175931930542,
+    "threshold": null,
+    "refresh": false,
+    "reuse": true,
+    "step_unet_time_s": 0.01349589999881573
+  }
+]

@@ -1,0 +1,10 @@
+mode,scope,policy_name,cache_interval,cache_branch_id,num_samples,avg_runtime_s,std_runtime_s,avg_speedup_vs_baseline,std_speedup_vs_baseline,avg_l2_vs_baseline,avg_psnr_vs_baseline,avg_refresh_ratio
+adaptive,default,adaptive_aggressive,3,0,4,11.449184,4.167401,2.383039,0.639512,0.12342636,18.855462,0.362745
+adaptive,default,adaptive_conservative,3,0,4,17.740113,3.483836,1.435459,0.238986,0.10487185,20.728818,0.647059
+adaptive,default,adaptive_default,3,0,4,16.191538,3.697674,1.589127,0.296908,0.11589867,19.680283,0.588235
+adaptive,layer_sweep,adaptive_default,3,0,4,19.690997,3.924671,1.306415,0.280361,0.11589867,19.680283,0.588235
+adaptive,layer_sweep,adaptive_default,3,1,4,18.611123,3.328226,1.361226,0.210802,0.11544581,19.699785,0.588235
+adaptive,layer_sweep,adaptive_default,3,2,4,21.000493,1.897164,1.183114,0.112573,0.11348355,19.866974,0.588235
+adaptive,layer_sweep,adaptive_default,3,3,4,16.726414,4.803504,1.593795,0.426989,0.10603292,20.263818,0.588235
+baseline,default,baseline,0,-1,4,24.632721,0.226163,1.0,0.0,0.0,99.0,0.0
+fixed,default,fixed_k3,3,0,4,10.573722,0.032315,2.329649,0.023477,0.11125567,20.423471,0.333333

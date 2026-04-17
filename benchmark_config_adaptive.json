@@ -1,0 +1,48 @@
+{
+  "experiment_name": "DeepCache Adaptive Benchmark",
+  "model_id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "steps": 50,
+  "repeats": 1,
+  "warmup_steps": 5,
+  "prompts": [
+    "a photo of an astronaut on a moon",
+    "a beautiful castle beside a waterfall in spring, painting",
+    "a golden retriever playing in the snow, professional photo",
+    "a futuristic city skyline at sunset, digital art"
+  ],
+  "seeds": [42],
+  "fixed_compare": {
+    "cache_interval": 3,
+    "cache_branch_id": 0
+  },
+  "layer_sweep_branch_ids": [0, 1, 2, 3],
+  "adaptive_policies": [
+    {
+      "name": "adaptive_default",
+      "threshold_early": 0.045,
+      "threshold_mid": 0.03,
+      "threshold_late": 0.02,
+      "early_ratio": 0.3,
+      "mid_ratio": 0.7,
+      "force_refresh_every": 4
+    },
+    {
+      "name": "adaptive_conservative",
+      "threshold_early": 0.035,
+      "threshold_mid": 0.025,
+      "threshold_late": 0.018,
+      "early_ratio": 0.3,
+      "mid_ratio": 0.7,
+      "force_refresh_every": 3
+    },
+    {
+      "name": "adaptive_aggressive",
+      "threshold_early": 0.06,
+      "threshold_mid": 0.045,
+      "threshold_late": 0.03,
+      "early_ratio": 0.3,
+      "mid_ratio": 0.7,
+      "force_refresh_every": 5
+    }
+  ]
+}
