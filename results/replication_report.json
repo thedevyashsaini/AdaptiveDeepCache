@@ -1,0 +1,65 @@
+{
+  "experiment": "DeepCache Replication - Stable Diffusion v1.5",
+  "paper": "DeepCache: Accelerating Diffusion Models for Free (CVPR 2024)",
+  "date": "2026-02-18T02:10:22.037571",
+  "system": {
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "vram_gb": 4.29,
+    "pytorch": "2.6.0+cu124"
+  },
+  "config": {
+    "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+    "steps": 50,
+    "cache_interval": 3,
+    "cache_branch_id": 0,
+    "seed": 42
+  },
+  "results": [
+    {
+      "prompt": "a photo of an astronaut on a moon",
+      "baseline_time_s": 14.934,
+      "deepcache_time_s": 6.429,
+      "speedup": 2.323,
+      "steps": 50,
+      "cache_interval": 3,
+      "cache_branch_id": 0,
+      "seed": 42
+    },
+    {
+      "prompt": "a beautiful castle beside a waterfall in spring, painting",
+      "baseline_time_s": 15.056,
+      "deepcache_time_s": 6.434,
+      "speedup": 2.34,
+      "steps": 50,
+      "cache_interval": 3,
+      "cache_branch_id": 0,
+      "seed": 42
+    },
+    {
+      "prompt": "a golden retriever playing in the snow, professional photo",
+      "baseline_time_s": 15.22,
+      "deepcache_time_s": 6.867,
+      "speedup": 2.216,
+      "steps": 50,
+      "cache_interval": 3,
+      "cache_branch_id": 0,
+      "seed": 42
+    },
+    {
+      "prompt": "a futuristic city skyline at sunset, digital art",
+      "baseline_time_s": 16.314,
+      "deepcache_time_s": 6.955,
+      "speedup": 2.346,
+      "steps": 50,
+      "cache_interval": 3,
+      "cache_branch_id": 0,
+      "seed": 42
+    }
+  ],
+  "summary": {
+    "avg_baseline_s": 15.381,
+    "avg_deepcache_s": 6.671,
+    "avg_speedup": 2.306,
+    "paper_reported_speedup": "~2.3x (PLMS, 50 steps)"
+  }
+}

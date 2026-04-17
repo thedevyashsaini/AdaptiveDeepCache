@@ -1,0 +1,69 @@
+2026-02-18 01:55:08,265 [INFO] HF_TOKEN loaded successfully.
+2026-02-18 01:55:08,265 [INFO] ============================================================
+2026-02-18 01:55:08,266 [INFO] SYSTEM INFORMATION
+2026-02-18 01:55:08,266 [INFO] ============================================================
+2026-02-18 01:55:08,266 [INFO] PyTorch version : 2.6.0+cu124
+2026-02-18 01:55:08,291 [INFO] CUDA available  : True
+2026-02-18 01:55:08,294 [INFO] CUDA device     : NVIDIA GeForce RTX 3050 Laptop GPU
+2026-02-18 01:55:08,295 [INFO] VRAM            : 4.29 GB
+2026-02-18 01:55:08,295 [INFO] Compute cap.    : 8.6
+2026-02-18 01:55:08,296 [INFO] ============================================================
+2026-02-18 01:55:09,134 [INFO] Loading model: stable-diffusion-v1-5/stable-diffusion-v1-5
+2026-02-18 02:08:49,014 [INFO] Attention slicing enabled (VRAM optimization).
+2026-02-18 02:08:49,015 [INFO] Warming up GPU (1 inference pass)...
+2026-02-18 02:08:52,238 [INFO] Warmup complete.
+2026-02-18 02:08:52,238 [INFO] 
+2026-02-18 02:08:52,238 [INFO] ============================================================
+2026-02-18 02:08:52,238 [INFO] REPLICATION EXPERIMENT: Stable Diffusion v1.5 + DeepCache
+2026-02-18 02:08:52,238 [INFO]   Steps: 50  |  Cache interval: 3  |  Branch: 0
+2026-02-18 02:08:52,238 [INFO] ============================================================
+2026-02-18 02:08:52,238 [INFO] 
+2026-02-18 02:08:52,289 [INFO]   Running baseline (standard SD 1.5)...
+2026-02-18 02:09:07,225 [INFO]   Baseline: 14.93s
+2026-02-18 02:09:07,225 [INFO]   Running DeepCache (interval=3, branch=0)...
+2026-02-18 02:09:13,666 [INFO]   DeepCache: 6.43s
+2026-02-18 02:09:13,666 [INFO]   >>> Speedup: 2.32x <<<
+2026-02-18 02:09:14,210 [INFO] 
+2026-02-18 02:09:14,211 [INFO]   Running baseline (standard SD 1.5)...
+2026-02-18 02:09:29,273 [INFO]   Baseline: 15.06s
+2026-02-18 02:09:29,274 [INFO]   Running DeepCache (interval=3, branch=0)...
+2026-02-18 02:09:35,716 [INFO]   DeepCache: 6.43s
+2026-02-18 02:09:35,716 [INFO]   >>> Speedup: 2.34x <<<
+2026-02-18 02:09:35,909 [INFO] 
+2026-02-18 02:09:35,910 [INFO]   Running baseline (standard SD 1.5)...
+2026-02-18 02:09:51,139 [INFO]   Baseline: 15.22s
+2026-02-18 02:09:51,139 [INFO]   Running DeepCache (interval=3, branch=0)...
+2026-02-18 02:09:58,016 [INFO]   DeepCache: 6.87s
+2026-02-18 02:09:58,016 [INFO]   >>> Speedup: 2.22x <<<
+2026-02-18 02:09:58,195 [INFO] 
+2026-02-18 02:09:58,196 [INFO]   Running baseline (standard SD 1.5)...
+2026-02-18 02:10:14,543 [INFO]   Baseline: 16.31s
+2026-02-18 02:10:14,544 [INFO]   Running DeepCache (interval=3, branch=0)...
+2026-02-18 02:10:21,517 [INFO]   DeepCache: 6.95s
+2026-02-18 02:10:21,517 [INFO]   >>> Speedup: 2.35x <<<
+2026-02-18 02:10:22,036 [INFO] 
+2026-02-18 02:10:22,036 [INFO] ============================================================
+2026-02-18 02:10:22,036 [INFO] REPLICATION RESULTS SUMMARY
+2026-02-18 02:10:22,037 [INFO] ============================================================
+2026-02-18 02:10:22,037 [INFO] Model          : stable-diffusion-v1-5/stable-diffusion-v1-5
+2026-02-18 02:10:22,037 [INFO] Inference steps: 50
+2026-02-18 02:10:22,037 [INFO] Cache interval : 3
+2026-02-18 02:10:22,037 [INFO] Cache branch   : 0
+2026-02-18 02:10:22,037 [INFO] Seed           : 42
+2026-02-18 02:10:22,037 [INFO] Num prompts    : 4
+2026-02-18 02:10:22,037 [INFO] ------------------------------------------------------------
+2026-02-18 02:10:22,037 [INFO]   [2.32x] 14.93s -> 6.43s  | "a photo of an astronaut on a moon..."
+2026-02-18 02:10:22,037 [INFO]   [2.34x] 15.06s -> 6.43s  | "a beautiful castle beside a waterfall in spring, p..."
+2026-02-18 02:10:22,037 [INFO]   [2.22x] 15.22s -> 6.87s  | "a golden retriever playing in the snow, profession..."
+2026-02-18 02:10:22,037 [INFO]   [2.35x] 16.31s -> 6.96s  | "a futuristic city skyline at sunset, digital art..."
+2026-02-18 02:10:22,037 [INFO] ------------------------------------------------------------
+2026-02-18 02:10:22,037 [INFO]   Average baseline  : 15.38s
+2026-02-18 02:10:22,037 [INFO]   Average DeepCache : 6.67s
+2026-02-18 02:10:22,037 [INFO]   Average speedup   : 2.31x
+2026-02-18 02:10:22,037 [INFO] 
+2026-02-18 02:10:22,037 [INFO]   Paper reports ~2.3x speedup for SD 1.5 with PLMS, 50 steps.
+2026-02-18 02:10:22,037 [INFO]   (Our config: PNDM scheduler, 50 steps, cache_interval=3)
+2026-02-18 02:10:22,037 [INFO] ============================================================
+2026-02-18 02:10:22,042 [INFO] Full report saved to: results\replication_report.json
+2026-02-18 02:10:22,042 [INFO] Images saved to: results/
+2026-02-18 02:10:22,042 [INFO] Done!
