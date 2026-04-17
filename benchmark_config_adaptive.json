@@ -18,31 +18,40 @@
   "layer_sweep_branch_ids": [0, 1, 2, 3],
   "adaptive_policies": [
     {
-      "name": "adaptive_default",
-      "threshold_early": 0.045,
-      "threshold_mid": 0.03,
-      "threshold_late": 0.02,
+      "name": "adaptive_speed",
+      "threshold_early": 1.35,
+      "threshold_mid": 1.22,
+      "threshold_late": 1.12,
       "early_ratio": 0.3,
       "mid_ratio": 0.7,
-      "force_refresh_every": 4
+      "force_refresh_every": 7,
+      "min_refresh_interval": 3,
+      "ema_alpha": 0.3,
+      "use_relative_delta": true
     },
     {
-      "name": "adaptive_conservative",
-      "threshold_early": 0.035,
-      "threshold_mid": 0.025,
-      "threshold_late": 0.018,
+      "name": "adaptive_balanced",
+      "threshold_early": 1.2,
+      "threshold_mid": 1.1,
+      "threshold_late": 1.02,
       "early_ratio": 0.3,
       "mid_ratio": 0.7,
-      "force_refresh_every": 3
+      "force_refresh_every": 5,
+      "min_refresh_interval": 2,
+      "ema_alpha": 0.3,
+      "use_relative_delta": true
     },
     {
-      "name": "adaptive_aggressive",
-      "threshold_early": 0.06,
-      "threshold_mid": 0.045,
-      "threshold_late": 0.03,
+      "name": "adaptive_quality",
+      "threshold_early": 1.08,
+      "threshold_mid": 1.02,
+      "threshold_late": 0.98,
       "early_ratio": 0.3,
       "mid_ratio": 0.7,
-      "force_refresh_every": 5
+      "force_refresh_every": 4,
+      "min_refresh_interval": 1,
+      "ema_alpha": 0.3,
+      "use_relative_delta": true
     }
   ]
 }

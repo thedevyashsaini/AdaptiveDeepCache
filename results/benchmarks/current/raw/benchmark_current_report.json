@@ -1,7 +1,7 @@
 {
   "meta": {
     "experiment": "DeepCache Current Benchmark",
-    "date": "2026-04-17T14:45:04.412174",
+    "date": "2026-04-17T16:30:56.939738",
     "git_sha": null,
     "system": {
       "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
@@ -45,14 +45,14 @@
     "best_speedup_config": {
       "mode": "deepcache_fixed",
       "cache_interval": 5,
-      "cache_branch_id": 0,
+      "cache_branch_id": 1,
       "num_samples": 4,
-      "avg_runtime_s": 6.223341,
-      "std_runtime_s": 0.195478,
-      "avg_speedup_vs_baseline": 3.949225,
-      "std_speedup_vs_baseline": 0.145791,
-      "avg_l2_vs_baseline": 0.12754868,
-      "avg_psnr_vs_baseline": 18.648786
+      "avg_runtime_s": 9.48191,
+      "std_runtime_s": 0.424045,
+      "avg_speedup_vs_baseline": 1.771531,
+      "std_speedup_vs_baseline": 0.046704,
+      "avg_l2_vs_baseline": 0.125224,
+      "avg_psnr_vs_baseline": 18.837847
     },
     "default_compare": {
       "cache_interval": 3,

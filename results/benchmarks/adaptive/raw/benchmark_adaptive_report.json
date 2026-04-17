@@ -1,7 +1,7 @@
 {
   "meta": {
     "experiment": "DeepCache Adaptive Benchmark",
-    "date": "2026-04-17T15:22:39.857553",
+    "date": "2026-04-17T16:49:23.644067",
     "system": {
       "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
       "vram_gb": 4.29,
@@ -34,31 +34,40 @@
       ],
       "adaptive_policies": [
         {
-          "name": "adaptive_default",
-          "threshold_early": 0.045,
-          "threshold_mid": 0.03,
-          "threshold_late": 0.02,
+          "name": "adaptive_speed",
+          "threshold_early": 1.35,
+          "threshold_mid": 1.22,
+          "threshold_late": 1.12,
           "early_ratio": 0.3,
           "mid_ratio": 0.7,
-          "force_refresh_every": 4
+          "force_refresh_every": 7,
+          "min_refresh_interval": 3,
+          "ema_alpha": 0.3,
+          "use_relative_delta": true
         },
         {
-          "name": "adaptive_conservative",
-          "threshold_early": 0.035,
-          "threshold_mid": 0.025,
-          "threshold_late": 0.018,
+          "name": "adaptive_balanced",
+          "threshold_early": 1.2,
+          "threshold_mid": 1.1,
+          "threshold_late": 1.02,
           "early_ratio": 0.3,
           "mid_ratio": 0.7,
-          "force_refresh_every": 3
+          "force_refresh_every": 5,
+          "min_refresh_interval": 2,
+          "ema_alpha": 0.3,
+          "use_relative_delta": true
         },
         {
-          "name": "adaptive_aggressive",
-          "threshold_early": 0.06,
-          "threshold_mid": 0.045,
-          "threshold_late": 0.03,
+          "name": "adaptive_quality",
+          "threshold_early": 1.08,
+          "threshold_mid": 1.02,
+          "threshold_late": 0.98,
           "early_ratio": 0.3,
           "mid_ratio": 0.7,
-          "force_refresh_every": 5
+          "force_refresh_every": 4,
+          "min_refresh_interval": 1,
+          "ema_alpha": 0.3,
+          "use_relative_delta": true
         }
       ]
     }
@@ -71,19 +80,20 @@
     "best_adaptive_default": {
       "mode": "adaptive",
       "scope": "default",
-      "policy_name": "adaptive_aggressive",
+      "policy_name": "adaptive_speed",
       "cache_interval": 3,
       "cache_branch_id": 0,
       "num_samples": 4,
-      "avg_runtime_s": 11.449184,
-      "std_runtime_s": 4.167401,
-      "avg_speedup_vs_baseline": 2.383039,
-      "std_speedup_vs_baseline": 0.639512,
-      "avg_l2_vs_baseline": 0.12342636,
-      "avg_psnr_vs_baseline": 18.855462,
-      "avg_refresh_ratio": 0.362745
+      "avg_runtime_s": 9.413876,
+      "std_runtime_s": 6.25434,
+      "avg_speedup_vs_baseline": 2.724005,
+      "std_speedup_vs_baseline": 1.162484,
+      "avg_l2_vs_baseline": 0.14211171,
+      "avg_psnr_vs_baseline": 17.510878,
+      "avg_refresh_ratio": 0.156863,
+      "avg_delta_score": 1.05585189
     },
-    "layer_policy": "adaptive_default"
+    "layer_policy": "adaptive_speed"
   },
   "tables": {
     "detail_csv": "results/benchmarks/adaptive/tables/adaptive_per_prompt_metrics.csv",

@@ -26,12 +26,16 @@ class DeepCacheSDHelper(object):
         cache_branch_id=0,
         skip_mode="uniform",
         adaptive=False,
+        adaptive_metric="latent_delta",
         threshold_early=0.040,
         threshold_mid=0.030,
         threshold_late=0.020,
         early_ratio=0.30,
         mid_ratio=0.70,
         force_refresh_every=0,
+        min_refresh_interval=1,
+        ema_alpha=0.30,
+        use_relative_delta=True,
     ):
         cache_layer_id = cache_branch_id % 3
         cache_block_id = cache_branch_id // 3
@@ -41,12 +45,16 @@ class DeepCacheSDHelper(object):
             "cache_block_id": cache_block_id,
             "skip_mode": skip_mode,
             "adaptive": adaptive,
+            "adaptive_metric": adaptive_metric,
             "threshold_early": float(threshold_early),
             "threshold_mid": float(threshold_mid),
             "threshold_late": float(threshold_late),
             "early_ratio": float(early_ratio),
             "mid_ratio": float(mid_ratio),
             "force_refresh_every": int(force_refresh_every),
+            "min_refresh_interval": int(min_refresh_interval),
+            "ema_alpha": float(ema_alpha),
+            "use_relative_delta": bool(use_relative_delta),
         }
 
     def get_step_logs(self):
@@ -75,6 +83,29 @@ class DeepCacheSDHelper(object):
         self.prev_latent = latent
         return float(delta)
 
+    def _update_delta_ema(self, delta):
+        if delta is None:
+            return None
+        if self.delta_ema is None:
+            self.delta_ema = float(delta)
+        else:
+            alpha = self.params.get("ema_alpha", 0.30)
+            self.delta_ema = alpha * float(delta) + (1.0 - alpha) * self.delta_ema
+        return self.delta_ema
+
+    def _compute_adaptive_score(self, delta):
+        if delta is None:
+            return None
+        if not self.params.get("use_relative_delta", True):
+            return float(delta)
+
+        ema = self._update_delta_ema(delta)
+        if ema is None:
+            return float(delta)
+
+        eps = 1e-8
+        return float(delta / max(ema, eps))
+
     def _is_refresh_step(self, delta):
         self.start_timestep = (
             self.cur_timestep if self.start_timestep is None else self.start_timestep
@@ -84,28 +115,34 @@ class DeepCacheSDHelper(object):
             cache_interval = self.params["cache_interval"]
             return (self.cur_timestep - self.start_timestep) % cache_interval == 0
 
-        if self.last_refresh_timestep is None:
+        if self.last_refresh_call_idx is None:
             return True
+
+        calls_since_refresh = self.cur_call_idx - self.last_refresh_call_idx
+        min_refresh_interval = max(int(self.params.get("min_refresh_interval", 1)), 1)
+        if calls_since_refresh < min_refresh_interval:
+            return False
 
         force_refresh_every = self.params.get("force_refresh_every", 0)
-        if (
-            force_refresh_every > 0
-            and (self.cur_timestep - self.last_refresh_timestep) >= force_refresh_every
-        ):
+        if force_refresh_every > 0 and calls_since_refresh >= force_refresh_every:
             return True
 
-        if delta is None:
+        score = self._compute_adaptive_score(delta)
+        if score is None:
             return True
 
         threshold = self._get_threshold_for_step()
-        return delta > threshold
+        return score > threshold
 
     def _register_step_decision(self, latent_model_input):
+        self.cur_call_idx += 1
         delta = self._compute_latent_delta(latent_model_input)
+        score = self._compute_adaptive_score(delta)
         refresh = self._is_refresh_step(delta)
 
         if refresh:
             self.last_refresh_timestep = self.cur_timestep
+            self.last_refresh_call_idx = self.cur_call_idx
 
         self.step_refresh_map[self.cur_timestep] = refresh
 
@@ -117,7 +154,10 @@ class DeepCacheSDHelper(object):
         self.step_logs.append(
             {
                 "timestep_index": int(self.cur_timestep),
+                "call_index": int(self.cur_call_idx),
                 "delta_latent": None if delta is None else float(delta),
+                "delta_score": None if score is None else float(score),
+                "delta_ema": None if self.delta_ema is None else float(self.delta_ema),
                 "threshold": threshold,
                 "refresh": bool(refresh),
                 "reuse": bool(not refresh),
@@ -296,8 +336,11 @@ class DeepCacheSDHelper(object):
         self.cached_output = {}
         self.start_timestep = None
         self.last_refresh_timestep = None
+        self.last_refresh_call_idx = None
         self.prev_latent = None
+        self.delta_ema = None
         self.step_refresh_map = {}
         self.step_logs = []
         self.timestep_index_map = None
         self.total_inference_steps = 0
+        self.cur_call_idx = -1

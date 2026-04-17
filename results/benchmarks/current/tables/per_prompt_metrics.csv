@@ -1,69 +1,69 @@
 mode,prompt_index,prompt,seed,repeat,steps,cache_interval,cache_branch_id,runtime_s,speedup_vs_baseline,l2_vs_baseline,psnr_vs_baseline,image_path
-baseline,1,a photo of an astronaut on a moon,42,1,50,0,-1,24.245942,1.0,0.0,99.0,results/benchmarks/current/images/baseline_p1_s42_r1.png
-baseline,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,0,-1,24.560946,1.0,0.0,99.0,results/benchmarks/current/images/baseline_p2_s42_r1.png
-baseline,3,"a golden retriever playing in the snow, professional photo",42,1,50,0,-1,24.580806,1.0,0.0,99.0,results/benchmarks/current/images/baseline_p3_s42_r1.png
-baseline,4,"a futuristic city skyline at sunset, digital art",42,1,50,0,-1,24.808721,1.0,0.0,99.0,results/benchmarks/current/images/baseline_p4_s42_r1.png
-deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,2,0,27.568774,0.879471,0.20985211,13.561733,results/benchmarks/current/images/dc_i2_b0_p1_s42_r1.png
-deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,2,0,20.79065,1.181346,0.04587013,26.769401,results/benchmarks/current/images/dc_i2_b0_p2_s42_r1.png
-deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,2,0,22.524435,1.091295,0.12732247,17.9019,results/benchmarks/current/images/dc_i2_b0_p3_s42_r1.png
-deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,2,0,14.099631,1.75953,0.05301689,25.511715,results/benchmarks/current/images/dc_i2_b0_p4_s42_r1.png
-deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,2,1,16.733481,1.448948,0.23324972,12.643577,results/benchmarks/current/images/dc_i2_b1_p1_s42_r1.png
-deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,2,1,16.776028,1.46405,0.04590667,26.762485,results/benchmarks/current/images/dc_i2_b1_p2_s42_r1.png
-deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,2,1,23.562171,1.043232,0.12353933,18.163895,results/benchmarks/current/images/dc_i2_b1_p3_s42_r1.png
-deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,2,1,24.313128,1.020384,0.05076652,25.888453,results/benchmarks/current/images/dc_i2_b1_p4_s42_r1.png
-deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,2,2,25.327132,0.957311,0.2455962,12.195567,results/benchmarks/current/images/dc_i2_b2_p1_s42_r1.png
-deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,2,2,21.654019,1.134244,0.04548355,26.842912,results/benchmarks/current/images/dc_i2_b2_p2_s42_r1.png
-deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,2,2,20.664894,1.189496,0.12647931,17.95961,results/benchmarks/current/images/dc_i2_b2_p3_s42_r1.png
-deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,2,2,19.381968,1.27999,0.05108009,25.834966,results/benchmarks/current/images/dc_i2_b2_p4_s42_r1.png
-deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,2,3,20.07457,1.207794,0.30456468,10.326409,results/benchmarks/current/images/dc_i2_b3_p1_s42_r1.png
-deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,2,3,23.189892,1.059123,0.04479788,26.974851,results/benchmarks/current/images/dc_i2_b3_p2_s42_r1.png
-deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,2,3,19.978955,1.230335,0.11526919,18.765735,results/benchmarks/current/images/dc_i2_b3_p3_s42_r1.png
-deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,2,3,20.057525,1.236879,0.04942647,26.120807,results/benchmarks/current/images/dc_i2_b3_p4_s42_r1.png
-deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,3,0,10.722541,2.261212,0.20336454,13.834496,results/benchmarks/current/images/dc_i3_b0_p1_s42_r1.png
-deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,3,0,14.493013,1.694675,0.05146994,25.768927,results/benchmarks/current/images/dc_i3_b0_p2_s42_r1.png
-deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,3,0,22.429712,1.095904,0.12947288,17.756424,results/benchmarks/current/images/dc_i3_b0_p3_s42_r1.png
-deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,3,0,18.964236,1.308185,0.0607153,24.334037,results/benchmarks/current/images/dc_i3_b0_p4_s42_r1.png
-deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,3,1,23.631141,1.026017,0.20294726,13.852336,results/benchmarks/current/images/dc_i3_b1_p1_s42_r1.png
-deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,3,1,30.42083,0.807373,0.05148907,25.765699,results/benchmarks/current/images/dc_i3_b1_p2_s42_r1.png
-deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,3,1,23.894377,1.028728,0.1235703,18.161718,results/benchmarks/current/images/dc_i3_b1_p3_s42_r1.png
-deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,3,1,13.273568,1.869032,0.06044517,24.372768,results/benchmarks/current/images/dc_i3_b1_p4_s42_r1.png
-deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,3,2,12.319446,1.968103,0.20465447,13.779576,results/benchmarks/current/images/dc_i3_b2_p1_s42_r1.png
-deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,3,2,11.988146,2.048769,0.05055979,25.923894,results/benchmarks/current/images/dc_i3_b2_p2_s42_r1.png
-deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,3,2,11.436101,2.149404,0.12453127,18.094432,results/benchmarks/current/images/dc_i3_b2_p3_s42_r1.png
-deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,3,2,11.85022,2.093524,0.06088743,24.309448,results/benchmarks/current/images/dc_i3_b2_p4_s42_r1.png
-deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,3,3,12.72324,1.905642,0.19774532,14.077875,results/benchmarks/current/images/dc_i3_b3_p1_s42_r1.png
-deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,3,3,13.052297,1.881734,0.0491971,26.16121,results/benchmarks/current/images/dc_i3_b3_p2_s42_r1.png
-deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,3,3,13.092475,1.877476,0.12350603,18.166237,results/benchmarks/current/images/dc_i3_b3_p3_s42_r1.png
-deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,3,3,13.103577,1.893279,0.05943281,24.519475,results/benchmarks/current/images/dc_i3_b3_p4_s42_r1.png
-deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,4,0,6.467989,3.748606,0.21200217,13.473194,results/benchmarks/current/images/dc_i4_b0_p1_s42_r1.png
-deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,4,0,6.661344,3.687086,0.05758433,24.793913,results/benchmarks/current/images/dc_i4_b0_p2_s42_r1.png
-deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,4,0,7.395244,3.323867,0.14177248,16.968161,results/benchmarks/current/images/dc_i4_b0_p3_s42_r1.png
-deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,4,0,7.011743,3.538167,0.07551768,22.439027,results/benchmarks/current/images/dc_i4_b0_p4_s42_r1.png
-deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,4,1,9.722134,2.493891,0.21314268,13.426592,results/benchmarks/current/images/dc_i4_b1_p1_s42_r1.png
-deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,4,1,9.904704,2.479726,0.05765262,24.78362,results/benchmarks/current/images/dc_i4_b1_p2_s42_r1.png
-deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,4,1,9.555251,2.572492,0.14207517,16.949636,results/benchmarks/current/images/dc_i4_b1_p3_s42_r1.png
-deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,4,1,9.821832,2.525875,0.07565305,22.423472,results/benchmarks/current/images/dc_i4_b1_p4_s42_r1.png
-deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,4,2,13.330289,1.818861,0.2266141,12.894261,results/benchmarks/current/images/dc_i4_b2_p1_s42_r1.png
-deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,4,2,12.572749,1.953507,0.05615389,25.012403,results/benchmarks/current/images/dc_i4_b2_p2_s42_r1.png
-deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,4,2,12.568937,1.955679,0.13545425,17.364147,results/benchmarks/current/images/dc_i4_b2_p3_s42_r1.png
-deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,4,2,12.371515,2.00531,0.0750477,22.493252,results/benchmarks/current/images/dc_i4_b2_p4_s42_r1.png
-deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,4,3,13.080515,1.853592,0.19259349,14.307168,results/benchmarks/current/images/dc_i4_b3_p1_s42_r1.png
-deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,4,3,13.183927,1.862946,0.05620988,25.003746,results/benchmarks/current/images/dc_i4_b3_p2_s42_r1.png
-deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,4,3,13.583331,1.80963,0.1288767,17.796512,results/benchmarks/current/images/dc_i4_b3_p3_s42_r1.png
-deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,4,3,13.604626,1.82355,0.07481959,22.519693,results/benchmarks/current/images/dc_i4_b3_p4_s42_r1.png
-deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,5,0,6.554402,3.699184,0.20989527,13.559947,results/benchmarks/current/images/dc_i5_b0_p1_s42_r1.png
-deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,5,0,6.046672,4.061895,0.07178914,22.878825,results/benchmarks/current/images/dc_i5_b0_p2_s42_r1.png
-deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,5,0,6.138573,4.004319,0.14051549,17.045516,results/benchmarks/current/images/dc_i5_b0_p3_s42_r1.png
-deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,5,0,6.153715,4.031503,0.08799484,21.110856,results/benchmarks/current/images/dc_i5_b0_p4_s42_r1.png
-deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,5,1,9.783146,2.478338,0.20984571,13.561998,results/benchmarks/current/images/dc_i5_b1_p1_s42_r1.png
-deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,5,1,9.614287,2.55463,0.07214121,22.836332,results/benchmarks/current/images/dc_i5_b1_p2_s42_r1.png
-deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,5,1,9.437849,2.604492,0.13589901,17.335674,results/benchmarks/current/images/dc_i5_b1_p3_s42_r1.png
-deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,5,1,9.446254,2.626303,0.08301006,21.617386,results/benchmarks/current/images/dc_i5_b1_p4_s42_r1.png
-deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,5,2,12.725429,1.905314,0.19930628,14.00958,results/benchmarks/current/images/dc_i5_b2_p1_s42_r1.png
-deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,5,2,12.73937,1.927956,0.07178485,22.879343,results/benchmarks/current/images/dc_i5_b2_p2_s42_r1.png
-deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,5,2,12.846155,1.913476,0.13769634,17.221552,results/benchmarks/current/images/dc_i5_b2_p3_s42_r1.png
-deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,5,2,12.708051,1.952205,0.08219414,21.703182,results/benchmarks/current/images/dc_i5_b2_p4_s42_r1.png
-deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,5,3,13.618998,1.780303,0.1888219,14.478953,results/benchmarks/current/images/dc_i5_b3_p1_s42_r1.png
-deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,5,3,14.44121,1.700754,0.07591119,22.393884,results/benchmarks/current/images/dc_i5_b3_p2_s42_r1.png
-deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,5,3,15.029626,1.63549,0.13970818,17.095563,results/benchmarks/current/images/dc_i5_b3_p3_s42_r1.png
-deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,5,3,14.526275,1.707852,0.08236084,21.685584,results/benchmarks/current/images/dc_i5_b3_p4_s42_r1.png
+baseline,1,a photo of an astronaut on a moon,42,1,50,0,-1,15.969049,1.0,0.0,99.0,results/benchmarks/current/images/baseline_p1_s42_r1.png
+baseline,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,0,-1,16.220904,1.0,0.0,99.0,results/benchmarks/current/images/baseline_p2_s42_r1.png
+baseline,3,"a golden retriever playing in the snow, professional photo",42,1,50,0,-1,16.936603,1.0,0.0,99.0,results/benchmarks/current/images/baseline_p3_s42_r1.png
+baseline,4,"a futuristic city skyline at sunset, digital art",42,1,50,0,-1,18.047407,1.0,0.0,99.0,results/benchmarks/current/images/baseline_p4_s42_r1.png
+deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,2,0,10.826917,1.47494,0.18299763,14.751091,results/benchmarks/current/images/dc_i2_b0_p1_s42_r1.png
+deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,2,0,11.199966,1.448299,0.03848359,28.294488,results/benchmarks/current/images/dc_i2_b0_p2_s42_r1.png
+deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,2,0,11.243283,1.506375,0.11685948,18.646721,results/benchmarks/current/images/dc_i2_b0_p3_s42_r1.png
+deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,2,0,11.460251,1.574783,0.04701027,26.556144,results/benchmarks/current/images/dc_i2_b0_p4_s42_r1.png
+deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,2,1,14.645197,1.090395,0.17864808,14.960033,results/benchmarks/current/images/dc_i2_b1_p1_s42_r1.png
+deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,2,1,13.277819,1.221654,0.03824427,28.348672,results/benchmarks/current/images/dc_i2_b1_p2_s42_r1.png
+deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,2,1,13.463753,1.257941,0.11594941,18.71463,results/benchmarks/current/images/dc_i2_b1_p3_s42_r1.png
+deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,2,1,13.737102,1.313771,0.04670888,26.612011,results/benchmarks/current/images/dc_i2_b1_p4_s42_r1.png
+deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,2,2,15.68474,1.018126,0.1794648,14.920414,results/benchmarks/current/images/dc_i2_b2_p1_s42_r1.png
+deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,2,2,15.684046,1.03423,0.03759573,28.497231,results/benchmarks/current/images/dc_i2_b2_p2_s42_r1.png
+deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,2,2,15.843192,1.069015,0.11802787,18.560308,results/benchmarks/current/images/dc_i2_b2_p3_s42_r1.png
+deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,2,2,15.810452,1.141486,0.04804888,26.366335,results/benchmarks/current/images/dc_i2_b2_p4_s42_r1.png
+deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,2,3,16.499955,0.967824,0.18294154,14.753753,results/benchmarks/current/images/dc_i2_b3_p1_s42_r1.png
+deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,2,3,16.600197,0.977151,0.03681747,28.67892,results/benchmarks/current/images/dc_i2_b3_p2_s42_r1.png
+deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,2,3,16.603388,1.020069,0.11463719,18.813489,results/benchmarks/current/images/dc_i2_b3_p3_s42_r1.png
+deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,2,3,16.628602,1.085323,0.04814236,26.349453,results/benchmarks/current/images/dc_i2_b3_p4_s42_r1.png
+deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,3,0,8.669007,1.842085,0.20336454,13.834496,results/benchmarks/current/images/dc_i3_b0_p1_s42_r1.png
+deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,3,0,8.698616,1.864768,0.05146994,25.768927,results/benchmarks/current/images/dc_i3_b0_p2_s42_r1.png
+deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,3,0,8.714022,1.943604,0.12947288,17.756424,results/benchmarks/current/images/dc_i3_b0_p3_s42_r1.png
+deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,3,0,13.069843,1.380843,0.0607153,24.334037,results/benchmarks/current/images/dc_i3_b0_p4_s42_r1.png
+deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,3,1,32.012188,0.498843,0.20294726,13.852336,results/benchmarks/current/images/dc_i3_b1_p1_s42_r1.png
+deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,3,1,10.134629,1.600543,0.05148907,25.765699,results/benchmarks/current/images/dc_i3_b1_p2_s42_r1.png
+deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,3,1,11.17733,1.515264,0.1235703,18.161718,results/benchmarks/current/images/dc_i3_b1_p3_s42_r1.png
+deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,3,1,11.205425,1.610595,0.06044517,24.372768,results/benchmarks/current/images/dc_i3_b1_p4_s42_r1.png
+deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,3,2,14.177265,1.126384,0.20465447,13.779576,results/benchmarks/current/images/dc_i3_b2_p1_s42_r1.png
+deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,3,2,14.241286,1.139006,0.05055979,25.923894,results/benchmarks/current/images/dc_i3_b2_p2_s42_r1.png
+deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,3,2,14.252117,1.188357,0.12453127,18.094432,results/benchmarks/current/images/dc_i3_b2_p3_s42_r1.png
+deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,3,2,14.251762,1.266328,0.06088743,24.309448,results/benchmarks/current/images/dc_i3_b2_p4_s42_r1.png
+deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,3,3,15.022553,1.063005,0.19774532,14.077875,results/benchmarks/current/images/dc_i3_b3_p1_s42_r1.png
+deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,3,3,34.534584,0.4697,0.0491971,26.16121,results/benchmarks/current/images/dc_i3_b3_p2_s42_r1.png
+deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,3,3,17.386343,0.974133,0.12350603,18.166237,results/benchmarks/current/images/dc_i3_b3_p3_s42_r1.png
+deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,3,3,18.623322,0.969076,0.05943281,24.519475,results/benchmarks/current/images/dc_i3_b3_p4_s42_r1.png
+deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,4,0,10.954597,1.457749,0.21200217,13.473194,results/benchmarks/current/images/dc_i4_b0_p1_s42_r1.png
+deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,4,0,10.910281,1.486754,0.05758433,24.793913,results/benchmarks/current/images/dc_i4_b0_p2_s42_r1.png
+deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,4,0,10.67901,1.585971,0.14177248,16.968161,results/benchmarks/current/images/dc_i4_b0_p3_s42_r1.png
+deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,4,0,10.772937,1.675254,0.07551768,22.439027,results/benchmarks/current/images/dc_i4_b0_p4_s42_r1.png
+deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,4,1,14.854028,1.075065,0.21314268,13.426592,results/benchmarks/current/images/dc_i4_b1_p1_s42_r1.png
+deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,4,1,10.414143,1.557584,0.05765262,24.78362,results/benchmarks/current/images/dc_i4_b1_p2_s42_r1.png
+deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,4,1,18.785742,0.901567,0.14207517,16.949636,results/benchmarks/current/images/dc_i4_b1_p3_s42_r1.png
+deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,4,1,38.564098,0.467985,0.07565305,22.423472,results/benchmarks/current/images/dc_i4_b1_p4_s42_r1.png
+deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,4,2,29.262015,0.545726,0.2266141,12.894261,results/benchmarks/current/images/dc_i4_b2_p1_s42_r1.png
+deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,4,2,12.83211,1.264087,0.05615389,25.012403,results/benchmarks/current/images/dc_i4_b2_p2_s42_r1.png
+deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,4,2,13.311867,1.272294,0.13545425,17.364147,results/benchmarks/current/images/dc_i4_b2_p3_s42_r1.png
+deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,4,2,13.451026,1.341712,0.0750477,22.493252,results/benchmarks/current/images/dc_i4_b2_p4_s42_r1.png
+deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,4,3,14.335378,1.113961,0.19259349,14.307168,results/benchmarks/current/images/dc_i4_b3_p1_s42_r1.png
+deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,4,3,14.422781,1.124672,0.05620988,25.003746,results/benchmarks/current/images/dc_i4_b3_p2_s42_r1.png
+deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,4,3,14.474519,1.170098,0.1288767,17.796512,results/benchmarks/current/images/dc_i4_b3_p3_s42_r1.png
+deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,4,3,14.483895,1.246033,0.07481959,22.519693,results/benchmarks/current/images/dc_i4_b3_p4_s42_r1.png
+deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,5,0,6.686957,2.388089,0.20989527,13.559947,results/benchmarks/current/images/dc_i5_b0_p1_s42_r1.png
+deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,5,0,6.690872,2.424333,0.07178914,22.878825,results/benchmarks/current/images/dc_i5_b0_p2_s42_r1.png
+deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,5,0,23.046418,0.734891,0.14051549,17.045516,results/benchmarks/current/images/dc_i5_b0_p3_s42_r1.png
+deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,5,0,22.400279,0.805678,0.08799484,21.110856,results/benchmarks/current/images/dc_i5_b0_p4_s42_r1.png
+deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,5,1,8.799171,1.814836,0.20984571,13.561998,results/benchmarks/current/images/dc_i5_b1_p1_s42_r1.png
+deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,5,1,9.479762,1.711109,0.07214121,22.836332,results/benchmarks/current/images/dc_i5_b1_p2_s42_r1.png
+deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,5,1,9.727953,1.741024,0.13589901,17.335674,results/benchmarks/current/images/dc_i5_b1_p3_s42_r1.png
+deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,5,1,9.920753,1.819157,0.08301006,21.617386,results/benchmarks/current/images/dc_i5_b1_p4_s42_r1.png
+deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,5,2,13.186764,1.210991,0.19930628,14.00958,results/benchmarks/current/images/dc_i5_b2_p1_s42_r1.png
+deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,5,2,13.249213,1.224292,0.07178485,22.879343,results/benchmarks/current/images/dc_i5_b2_p2_s42_r1.png
+deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,5,2,13.244235,1.278791,0.13769634,17.221552,results/benchmarks/current/images/dc_i5_b2_p3_s42_r1.png
+deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,5,2,30.675393,0.588335,0.08219414,21.703182,results/benchmarks/current/images/dc_i5_b2_p4_s42_r1.png
+deepcache_fixed,1,a photo of an astronaut on a moon,42,1,50,5,3,21.777429,0.733284,0.1888219,14.478953,results/benchmarks/current/images/dc_i5_b3_p1_s42_r1.png
+deepcache_fixed,2,"a beautiful castle beside a waterfall in spring, painting",42,1,50,5,3,13.214768,1.227483,0.07591119,22.393884,results/benchmarks/current/images/dc_i5_b3_p2_s42_r1.png
+deepcache_fixed,3,"a golden retriever playing in the snow, professional photo",42,1,50,5,3,13.881689,1.220068,0.13970818,17.095563,results/benchmarks/current/images/dc_i5_b3_p3_s42_r1.png
+deepcache_fixed,4,"a futuristic city skyline at sunset, digital art",42,1,50,5,3,14.121949,1.277969,0.08236084,21.685584,results/benchmarks/current/images/dc_i5_b3_p4_s42_r1.png

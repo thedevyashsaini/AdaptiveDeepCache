@@ -119,6 +119,9 @@ def compute_step_summary(step_logs: list[dict]) -> dict:
     refresh_count = sum(1 for x in step_logs if x.get("refresh"))
     reuse_count = sum(1 for x in step_logs if x.get("reuse"))
     deltas = [x["delta_latent"] for x in step_logs if x.get("delta_latent") is not None]
+    delta_scores = [
+        x["delta_score"] for x in step_logs if x.get("delta_score") is not None
+    ]
     unet_times = [
         x["step_unet_time_s"]
         for x in step_logs
@@ -129,6 +132,7 @@ def compute_step_summary(step_logs: list[dict]) -> dict:
         "reuse_count": reuse_count,
         "refresh_ratio": float(refresh_count / max(refresh_count + reuse_count, 1)),
         "avg_delta_latent": float(np.mean(deltas)) if deltas else None,
+        "avg_delta_score": float(np.mean(delta_scores)) if delta_scores else None,
         "avg_step_unet_time_s": float(np.mean(unet_times)) if unet_times else None,
     }
 
@@ -212,6 +216,7 @@ def main() -> None:
                         "reuse_count": 0,
                         "refresh_ratio": 0.0,
                         "avg_delta_latent": None,
+                        "avg_delta_score": None,
                         "avg_step_unet_time_s": None,
                         "threshold_early": None,
                         "threshold_mid": None,
@@ -219,6 +224,9 @@ def main() -> None:
                         "early_ratio": None,
                         "mid_ratio": None,
                         "force_refresh_every": None,
+                        "min_refresh_interval": None,
+                        "ema_alpha": None,
+                        "use_relative_delta": None,
                         "step_log_path": None,
                         "image_path": baseline_path.as_posix(),
                     }
@@ -274,6 +282,7 @@ def main() -> None:
                         "reuse_count": step_summary["reuse_count"],
                         "refresh_ratio": round(step_summary["refresh_ratio"], 6),
                         "avg_delta_latent": None,
+                        "avg_delta_score": None,
                         "avg_step_unet_time_s": round(
                             step_summary["avg_step_unet_time_s"], 8
                         )
@@ -285,6 +294,9 @@ def main() -> None:
                         "early_ratio": None,
                         "mid_ratio": None,
                         "force_refresh_every": None,
+                        "min_refresh_interval": None,
+                        "ema_alpha": None,
+                        "use_relative_delta": None,
                         "step_log_path": log_path.as_posix(),
                         "image_path": image_path.as_posix(),
                     }
@@ -303,6 +315,9 @@ def main() -> None:
             "early_ratio": policy["early_ratio"],
             "mid_ratio": policy["mid_ratio"],
             "force_refresh_every": policy["force_refresh_every"],
+            "min_refresh_interval": policy.get("min_refresh_interval", 1),
+            "ema_alpha": policy.get("ema_alpha", 0.30),
+            "use_relative_delta": policy.get("use_relative_delta", True),
         }
         for seed in seeds:
             for prompt_i, prompt in enumerate(prompts):
@@ -354,6 +369,9 @@ def main() -> None:
                             )
                             if step_summary["avg_delta_latent"] is not None
                             else None,
+                            "avg_delta_score": round(step_summary["avg_delta_score"], 8)
+                            if step_summary["avg_delta_score"] is not None
+                            else None,
                             "avg_step_unet_time_s": round(
                                 step_summary["avg_step_unet_time_s"], 8
                             )
@@ -365,6 +383,13 @@ def main() -> None:
                             "early_ratio": policy["early_ratio"],
                             "mid_ratio": policy["mid_ratio"],
                             "force_refresh_every": policy["force_refresh_every"],
+                            "min_refresh_interval": policy.get(
+                                "min_refresh_interval", 1
+                            ),
+                            "ema_alpha": policy.get("ema_alpha", 0.30),
+                            "use_relative_delta": policy.get(
+                                "use_relative_delta", True
+                            ),
                             "step_log_path": log_path.as_posix(),
                             "image_path": image_path.as_posix(),
                         }
@@ -383,6 +408,9 @@ def main() -> None:
             "early_ratio": layer_policy["early_ratio"],
             "mid_ratio": layer_policy["mid_ratio"],
             "force_refresh_every": layer_policy["force_refresh_every"],
+            "min_refresh_interval": layer_policy.get("min_refresh_interval", 1),
+            "ema_alpha": layer_policy.get("ema_alpha", 0.30),
+            "use_relative_delta": layer_policy.get("use_relative_delta", True),
         }
         for seed in seeds:
             for prompt_i, prompt in enumerate(prompts):
@@ -432,6 +460,9 @@ def main() -> None:
                             )
                             if step_summary["avg_delta_latent"] is not None
                             else None,
+                            "avg_delta_score": round(step_summary["avg_delta_score"], 8)
+                            if step_summary["avg_delta_score"] is not None
+                            else None,
                             "avg_step_unet_time_s": round(
                                 step_summary["avg_step_unet_time_s"], 8
                             )
@@ -443,6 +474,13 @@ def main() -> None:
                             "early_ratio": layer_policy["early_ratio"],
                             "mid_ratio": layer_policy["mid_ratio"],
                             "force_refresh_every": layer_policy["force_refresh_every"],
+                            "min_refresh_interval": layer_policy.get(
+                                "min_refresh_interval", 1
+                            ),
+                            "ema_alpha": layer_policy.get("ema_alpha", 0.30),
+                            "use_relative_delta": layer_policy.get(
+                                "use_relative_delta", True
+                            ),
                             "step_log_path": log_path.as_posix(),
                             "image_path": image_path.as_posix(),
                         }
@@ -478,6 +516,11 @@ def main() -> None:
             for r in group_rows
             if r["refresh_ratio"] is not None
         ]
+        delta_scores = [
+            float(r["avg_delta_score"])
+            for r in group_rows
+            if r.get("avg_delta_score") not in (None, "")
+        ]
         summary.append(
             {
                 "mode": mode,
@@ -494,6 +537,9 @@ def main() -> None:
                 "avg_psnr_vs_baseline": round(float(psnrs.mean()), 6),
                 "avg_refresh_ratio": round(float(np.mean(refresh_ratio)), 6)
                 if refresh_ratio
+                else None,
+                "avg_delta_score": round(float(np.mean(delta_scores)), 8)
+                if delta_scores
                 else None,
             }
         )
@@ -527,6 +573,7 @@ def main() -> None:
         "reuse_count",
         "refresh_ratio",
         "avg_delta_latent",
+        "avg_delta_score",
         "avg_step_unet_time_s",
         "threshold_early",
         "threshold_mid",
@@ -534,6 +581,9 @@ def main() -> None:
         "early_ratio",
         "mid_ratio",
         "force_refresh_every",
+        "min_refresh_interval",
+        "ema_alpha",
+        "use_relative_delta",
         "step_log_path",
         "image_path",
     ]
@@ -551,6 +601,7 @@ def main() -> None:
         "avg_l2_vs_baseline",
         "avg_psnr_vs_baseline",
         "avg_refresh_ratio",
+        "avg_delta_score",
     ]
 
     write_csv(paths["tables"] / "adaptive_per_prompt_metrics.csv", rows, detail_fields)
